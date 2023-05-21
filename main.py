@@ -39,5 +39,5 @@ for event in longpoll.listen():
         # Получаем текст сообщения и отправителя
         message = event.message.get('text')
         sender = get_sender_name(event.message.get('from_id'))
-        fullmsg = str(f"10А ({sender}): {message}")
+        fullmsg = str(f"VK ({sender}): {message}")
         send_telegram_message(TELEGRAM_TOKEN,telegram_chat_id,fullmsg)
